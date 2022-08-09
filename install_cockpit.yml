@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install cockpit
+    package:
+      name:
+        - cockpit
+      state: latest
+      update_cache: yes
